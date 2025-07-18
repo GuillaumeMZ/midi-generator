@@ -2,7 +2,7 @@
 
 This is a procedural music generator, which uses [Markov chains](https://en.wikipedia.org/wiki/Markov_chain) to generate coherent audio.
 
-https://github.com/user-attachments/assets/8b0b5f3f-0cd9-4279-9919-1f933b403785
+https://github.com/user-attachments/assets/80516e01-a6ad-4492-84d4-b0b715edc3cf
 
 ## Features
 
