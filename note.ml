@@ -63,4 +63,40 @@ let to_midi_int (octave, note) =
   let octave_int = int_of_octave octave in
   let note_int   = int_of_pitch note in
   let result     = 12 * octave_int + note_int in
-  if result > 127 then failwith "Invalid MIDI note" else result (* TODO: better error message *) 
+  if result > 127 then failwith "Invalid MIDI note" else result (* TODO: better error message *)
+
+let pitch_of_string = function
+| "C" -> C
+| "C#" -> Csharp
+| "D" -> D
+| "D#" -> Dsharp
+| "E" -> E
+| "F" -> F
+| "F#" -> Fsharp
+| "G" -> G
+| "G#" -> Gsharp
+| "A" -> A
+| "A#" -> Asharp
+| "B" -> B
+| other -> failwith ("Unknown pitch " ^ other)
+
+let octave_of_int = function
+| 0 -> Octave0
+| 1 -> Octave1
+| 2 -> Octave2
+| 3 -> Octave3
+| 4 -> Octave4
+| 5 -> Octave5
+| 6 -> Octave6
+| 7 -> Octave7
+| 8 -> Octave8
+| 9 -> Octave9
+| 10 -> Octave10
+| other -> failwith ("Unknown octave " ^ (string_of_int other))
+
+let of_string string = 
+  let (octave, pitch) = Scanf.sscanf string "%s %d" (fun pitch octave -> (octave_of_int octave, pitch_of_string pitch)) in
+  if octave = Octave10 && (pitch = Gsharp || pitch = A || pitch = Asharp || pitch = B) then
+    failwith "Invalid MIDI note encountered"
+  else
+    (octave, pitch)
