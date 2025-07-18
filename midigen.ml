@@ -39,9 +39,9 @@ let rec add_offs events = match events with
 let () =
   Random.self_init ();
   let notes = StringMarkov.run "C" 30 markov in
-  let events = List.map (fun note -> Event.NoteOn {channel = 0; note; velocity = 64}) notes |> add_offs in
-  let events' = events @ [Event.EndOfTrack] in
-  let track = List.fold_left (fun acc  event -> Track.append_event event 80 acc) (Track.empty ()) events' in
+  let events = List.map (fun note -> Event.NoteOn {channel = 0; note; velocity = 127}) notes |> add_offs in
+  let events' = (Event.ProgramChange{channel = 0; program = 26}) :: events @ [Event.EndOfTrack] in
+  let track = List.fold_left (fun acc  event -> Track.append_event event 127 acc) (Track.empty ()) events' in
   let midi_bytes = Midi.empty () |> Midi.append_track track |> Midi.to_bytes |> Bytes2.to_bytes in
   let channel = Out_channel.open_bin "result.mid" in
   Out_channel.output_bytes channel midi_bytes
