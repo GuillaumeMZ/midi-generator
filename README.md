@@ -6,7 +6,11 @@ https://github.com/user-attachments/assets/77e3cdda-6ff8-4f75-a339-d0cd948e8e76
 
 ## Features
 
-- Generate a ~30s long piano sequence using the C major scale.
+- Create the melody you want by providing a custom Markov chain; see the section "How to run" below.
+- Use any instrument among 127 instruments available; see the section "Available instruments" below.
+- Configure how long the music must be.
+- Configure the music's tempo.
+- Configure the volume.
 
 ## How to compile
 
@@ -31,7 +35,16 @@ Note: even though the executable has the `.exe` extension on Linux/MacOS, it is 
 
 ## How to run
 
-Just start `midigen.exe`. It will produce a MIDI file named `result.mid` in the current working directory. To listen to the result, install a MIDI player such as [Timidity](https://sourceforge.net/projects/timidity/). If you use Timidity, just run (assuming it is in your `$PATH`)
+Start `midigen.exe -i path_to_config_file -o path/to/result.mid`. You can use the configuration file provided in the `example_input` folder to test the program. Here is a small guide about the expected file format:
+
+- The first line must be `instrument: instrument_name` where `instrument_name` is one of the instruments defined in the "Available instruments" section.
+- The second line must be `notes: number_of_notes` where `number_of_notes` is the number of notes of the output.
+- The third line must be `tempo: the_tempo` where `the_tempo` (between 0 and 127 included) controls how fast the output music will be.
+- The fourth line must be `volume: the_volume` where `the_volume` (between 0 and 127 included) controls the volume of the output music.
+- The fifth line must be `initial: initial_note` where `initial_note` will be the first note of the output music.
+- These five lines are followed by Markov chain transitions, one per line. For instance, the transition `C 5 -> D 5 (0.5)` means "there is a 0.5 probability that the next note is D (octave 5) if the current note is C (octave 5).
+
+To listen to the result, install a MIDI player such as [Timidity](https://sourceforge.net/projects/timidity/). If you use Timidity, just run (assuming it is in your `$PATH`)
 
 ```bash
 timidity path/to/result.mid
