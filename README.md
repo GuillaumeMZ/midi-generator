@@ -39,6 +39,181 @@ timidity path/to/result.mid
 
 to play the generated sound.
 
+## Available instruments
+
+### Piano timbres
+
+- `acoustic_grand_piano`
+- `bright_acoustic_piano`
+- `electric_grand_piano`
+- `honky-tonk_piano`
+- `rhodes_piano`
+- `chorused_piano`
+- `harpsichord`
+- `clavinet`
+
+### Chromatic percussion
+
+- `celesta`
+- `glockenspiel`
+- `music_box`
+- `vibraphone`
+- `marimba`
+- `xylophone`
+- `tubular_bells`
+- `dulcimer`
+
+### Organ timbres
+
+- `hammond_organ`
+- `percussive_organ`
+- `rock_organ`
+- `church_organ`
+- `reed_organ`
+- `accordion`
+- `harmonica`
+- `tango_accordion`
+
+### Guitar timbres
+
+- `acoustic_nylon_guitar`
+- `acoustic_steel_guitar`
+- `electric_jazz_guitar`
+- `electric_clean_guitar`
+- `electric_muted_guitar`
+- `overdriven_guitar`
+- `distortion_guitar`
+- `guitar_harmonics`
+
+### Bass timbres
+
+- `acoustic_bass`
+- `fingered_electric_bass`
+- `plucked_electric_bass`
+- `fretless_bass`
+- `slap_bass_1`
+- `slap_bass_2`
+- `synth_bass_1`
+- `synth_bass_2`
+
+### String timbres
+
+- `violin`
+- `viola`
+- `cello`
+- `contrabass`
+- `tremolo_strings`
+- `pizzicato_strings`
+- `orchestral_harp`
+- `timpani`
+
+### Ensemble timbres
+
+- `string_ensemble_1`
+- `string_ensemble_2`
+- `synth_strings_1`
+- `synth_strings_2`
+- `choir_aah`
+- `choir_ooh`
+- `synth_voice`
+- `orchestra_hit`
+
+### Brass timbres
+
+- `trumpet`
+- `trombone`
+- `tuba`
+- `muted_trumpet`
+- `french_horn`
+- `brass_section`
+- `synth_brass_1`
+- `synth_brass_2`
+
+### Reed timbres
+
+- `soprano_sax`
+- `alto_sax`
+- `tenor_sax`
+- `baritone_sax`
+- `oboe`
+- `english_horn`
+- `bassoon`
+- `clarinet`
+
+### Pipe timbres
+
+- `piccolo`
+- `flute`
+- `recorder`
+- `pan_flute`
+- `bottle_blow`
+- `shakuhachi`
+- `whistle`
+- `ocarina`
+
+### Synth lead
+
+- `square_wave_lead`
+- `sawtooth_wave_lead`
+- `calliope_lead`
+- `chiff_lead`
+- `charang_lead`
+- `voice_lead`
+- `fifths_lead`
+- `bass_lead`
+
+### Synth pad
+
+- `new_age_pad`
+- `warm_pad`
+- `polysynth_pad`
+- `choir_pad`
+- `bowed_pad`
+- `metallic_pad`
+- `halo_pad`
+- `sweep_pad`
+
+### Synth effects
+
+- `rain_effect`
+- `soundtrack_effect`
+- `crystal_effect`
+- `atmosphere_effect`
+- `brightness_effect`
+- `goblins_effect`
+- `echoes_effect`
+- `sci-fi_effect`
+
+### Ethnic timbres
+
+- `sitar`
+- `banjo`
+- `shamisen`
+- `koto`
+- `kalimba`
+- `bag_pipe`
+- `fiddle`
+- `shanai`
+
+### Sound effects
+
+- `tinkle_bell`
+- `agogo`
+- `steel_drums`
+- `woodblock`
+- `taiko_drum`
+- `melodic_tom`
+- `synth_drum`
+- `reverse_cymbal`
+- `guitar_fret_noise`
+- `breath_noise`
+- `seashore`
+- `bird_tweet`
+- `telephone_ring`
+- `helicopter`
+- `applause`
+- `gunshot`
+
 ## Resources
 
 - [MIDI technical specification](http://www.somascape.org/midi/tech/mfile.html)
